@@ -1,24 +1,58 @@
-# README
+# bookers_app
+## Webアプリの要件を確認する
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###【Bookers】
+テーマ：読んだ本の感想を投稿するサイト
+完成アプリケーションは、以下のURLで閲覧できます。
+実装する機能やレイアウトは、下記の要件を参考にしてください。
+完成アプリケーションURL：https://bookers-level2.herokuapp.com
 
-Things you may want to cover:
+###【実装する機能】
+* 共通で実装する機能
+* 基本的に、上記の完成アプリケーションと同じ状態にしてください。
+* ページごとのURL
+* ページ上の各種リンク
+* 投稿データのモデル名は、Bookにしてください。
+* ユーザーに関するモデル名は、Userとしてください。
+* ルートパスを設定してください。
+* ルーティングは、resourcesを使ってください。
+* 投稿や更新が成功したときは、サクセスメッセージが表示されるようにしてください
+* サクセスメッセージには、「successfully」の言葉が含まれるようにしてください。
+* エラーメッセージには、「error」の言葉が含まれるようにしてください。
+* ログイン済み／ログイン前の状態によって、ヘッダーの内容が変わるようにしてください。
+* ログイン済みの場合は、以下のリンクがヘッダーに表示されるように設定してください。
+（大文字／小文字、半角スペースの有無に注意してください。
+* aboutページのURLはhttp://localhost:3000/home/aboutとなるようにしてください。
+* Home
+* Users
+* Books
+* logout
+* ログインしていない場合は、ヘッダーに以下のリンクが表示されるように設定してください。
+（大文字／小文字、半角スペースの有無に注意してください）
+* Home
+* About
+* sign up
+* login
 
-* Ruby version
+##### Userに実装する機能
+カラム名は、以下のように設定してください。
+* name：名前
+* introduction：自己紹介文
+* profile_image_id：「refile」による画像保存用
+* ユーザー名・メール・パスワードで、ユーザーの新規登録ができるようにしてください。
+* ユーザー名は、2～20文字の範囲で設定してください。
+* ユーザー名が空欄や20文字を超える場合、エラーメッセージが表示されるように設定してください。
+* ログイン機能には、「devise」を使用してください。
+* ユーザー名とパスワードで、ログインできるようにしてください。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###【レイアウト／デザインに関する設定】
+デザインは、「Bootstrap」を使用してください。
+Bootstrapを使って、以下のものを適用してください。
+* アイコン
+* ヘッダーのデザイン
+* テーブルのデザイン
+* 「グリッドシステム」を使ってレイアウトをしてください。
+* 今回は、レスポンシブ対応は特に指定しなくてかまいません。
+* Rspecによるテスト
+* 作成したアプリケーションが、要件を満たしているかどうかをテストしましょう。
+* テストには、テストフレームワーク「Rspec」を使います。
