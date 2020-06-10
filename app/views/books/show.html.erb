@@ -28,17 +28,17 @@
         <td><%= @book.body %></td>
         <td>
           <% if @book.favorited_by?(current_user) %>      <!-- いいね機能 -->
-            <%= link_to book_favorites_path(@book, redirect_id: 0), method: :delete do %>
+            <%= link_to book_favorites_path(@book, redirect_id: 0), method: :delete, class: "fab" do %>
               <span class="glyphicon glyphicon-heart"><%= @book.favorites.count%></span>
             <% end %>
           <% else %>
-            <%= link_to book_favorites_path(@book, redirect_id: 0), method: :post do %>
+            <%= link_to book_favorites_path(@book, redirect_id: 0), method: :post,  class: "fab" do %>
               <span class="glyphicon glyphicon-heart-empty"><%= @book.favorites.count %></span>
             <% end %>
           <% end %>
         </td>
 
-        <td>コメント数：<%= @book.book_comments.count %></td>
+        <td class="comment">コメント数：<%= @book.book_comments.count %></td>
 
         <% if @book.user == current_user %>
           <td><%= link_to 'Edit', edit_book_path(@book), class: "btn-sm btn-success edit_book_#{@book.id}" %></td>
