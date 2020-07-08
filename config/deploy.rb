@@ -2,7 +2,7 @@
 lock "~> 3.14.1"
 
 set :application, "bookers_app" # my_app_name → アプリケーション名
-set :repo_url, "https://github.com/tsuny221/bookers_app.git" # git@example.com:me/my_repo.git → GitHubに登録しているアプリのアドレス
+set :repo_url, "git@github.com:tsuny221/bookers_app.git" # git@example.com:me/my_repo.git → GitHubに登録しているアプリのアドレス
 # アプリのアドレスは$ bundle exec cap installコマンドで確認できます
 set :deploy_to, "/home/ec2-user/bookers_app"
 set :rbenv_ruby, '2.5.7'
